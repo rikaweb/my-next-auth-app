@@ -14,6 +14,7 @@ npm install
 Create a .env.local file in the root of your project and add the following line:
 ```bash
 NEXTAUTH_URL=http://localhost:3000/
+NEXTAUTH_SECRET=zGTbqr8RBOIYUGN+MmMj1Hejw/BAAm+QB4G3lHpjb70=
 ```
 
 Next, run the development server:
