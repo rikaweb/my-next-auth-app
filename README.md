@@ -11,7 +11,10 @@ git clone https://github.com/your-username/my-next-auth-app.git
 cd my-next-auth-app
 npm install
 ```
-
+Create a .env.local file in the root of your project and add the following line:
+```bash
+NEXTAUTH_URL=http://localhost:3000/
+```
 
 Next, run the development server:
 ```bash

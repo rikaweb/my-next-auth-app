@@ -13,12 +13,11 @@ export default NextAuth({
       },
       authorize: async (credentials) => {
         try {
-          // Simulating an authentication request using JSONPlaceholder
           const res = await axios.get(
             "https://jsonplaceholder.typicode.com/users?email=" + credentials?.email
           );
           const users = res.data;
-          const user = users[0]; // Assuming the first user matches the credentials
+          const user = users[0];
 
           if (user) {
             return { id: user.id, email: user.email, name: user.name };
@@ -40,7 +39,7 @@ export default NextAuth({
       return token;
     },
     async session({ session, token }) {
-      session.user = token.user as any; // Cast to any to avoid TypeScript error
+      session.user = token.user as any;
       return session;
     },
   },
